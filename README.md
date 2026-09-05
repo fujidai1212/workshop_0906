@@ -40,7 +40,8 @@ OpenAI API だけを使い、エージェントの本体である while ルー�
 後続の `!python ...` セルがそれを動かす、という作りになっている。
 
 ## 出典
-https://www.anthropic.com/engineering/building-effective-agents
+>https://www.anthropic.com/engineering/building-effective-agents
+
 上記のアンソロピックの有名な技術ブログを参考にしています。
 
 travel スイートのツール・データ・タスク文は AgentDojo (v0.1.23) から引用したもの。
@@ -49,5 +50,6 @@ travel スイートのツール・データ・タスク文は AgentDojo (v0.1.23
 > [github.com/ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) — MIT License
 
 Langgraph関連の参考資料
-https://github.com/langchain-ai/langgraph
-https://qiita.com/sakuraia/items/27db3f118e0ee41c54c1
+>https://github.com/langchain-ai/langgraph
+>
+>https://qiita.com/sakuraia/items/27db3f118e0ee41c54c1
