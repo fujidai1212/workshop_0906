@@ -19,29 +19,35 @@ OpenAI API だけを使い、エージェントの本体である while ルー�
 最後の課題7 は**プロンプトインジェクション**で、汚染されたチケットを読ませると
 エージェントが外部データの指示に従ってしまうことを実際に見る。
 
-### `Travel_Agent_Workshop.ipynb` — 第2回: LangGraph で作る
+### `Travel_Agent_Workshop.ipynb` — 第2回（時間が余ったら）: LangGraph で作る
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fujidai1212/workshop_0906/blob/main/Travel_Agent_Workshop.ipynb)
 
 第1回と同じ「ループ」を、今度は LangGraph の**グラフ**として組む。
 題材は **AgentDojo の travel スイート**（旅行業務。ツール28個 / ユーザータスク20件 / 攻撃タスク7件）で、
-第1回の7ツールでは出てこなかった規模の問題を扱う。
+第1回に比べて複雑な環境とタスクを用意している
 
 課題1 では単純なループではなくワークフローとしてグラフを設計し、
 課題2 では汚染されたレビュー文を読ませてインジェクションを試す（攻撃文7種を収録）。
+自分でいろいろ自由に試し甲斐のある資料になっています。
 
 ## 使い方
 
-どちらも Colab で開き、**上のメニューから「ドライブにコピーを保存」**を押してから、
+どちらも Googleドライブに保存し、Colab で開き、**上のメニューから「ドライブにコピーを保存」**を押してから、
 セルを**上から順に**実行する。OpenAI API キーが必要。
 
 `%%writefile` の付いたセルは実行すると `.py` ファイルとして書き出され、
 後続の `!python ...` セルがそれを動かす、という作りになっている。
 
 ## 出典
+https://www.anthropic.com/engineering/building-effective-agents
+上記のアンソロピックの有名な技術ブログを参考にしています。
 
 travel スイートのツール・データ・タスク文は AgentDojo (v0.1.23) から引用したもの。
-
 > AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents
 > ETH Zurich SPY Lab, NeurIPS 2024, [arXiv:2406.13352](https://arxiv.org/abs/2406.13352)
 > [github.com/ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) — MIT License
+
+Langgraph関連の参考資料
+https://github.com/langchain-ai/langgraph
+https://qiita.com/sakuraia/items/27db3f118e0ee41c54c1
